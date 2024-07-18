@@ -1,9 +1,29 @@
-export default function List() {return(
-<aside>
-    <h2>Estudos do dia:</h2>
-    <ul>
-        <li><h3>React</h3><span>02:00:00</span></li>
-        <li><h3>Javascript</h3><span>01:00:00</span></li>
-    </ul>
-</aside>
-)}
+export default function List() {
+  const tarefas = [
+    {
+      nome: "React",
+      tempo: "02:00:00",
+    },
+    {
+      nome: "Javascript",
+      tempo: "01:00:00",
+    },
+    {
+      nome: "Typescript",
+      tempo: "02:00:00",
+    },
+  ];
+  return (
+    <aside>
+      <h2>Estudos do dia:</h2>
+      <ul>
+        {tarefas.map((item, index) => (
+          <li key={index}>
+            <h3>{item.nome}</h3>
+            <span>{item.tempo}</span>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
+}

@@ -1,17 +1,18 @@
+import Item from "./Item/Item";
 import style from "./List.module.css";
 
 export default function List() {
   const tarefas = [
     {
-      nome: "React",
+      tarefa: "React",
       tempo: "02:00:00",
     },
     {
-      nome: "Javascript",
+      tarefa: "Javascript",
       tempo: "01:00:00",
     },
     {
-      nome: "Typescript",
+      tarefa: "Typescript",
       tempo: "02:00:00",
     },
   ];
@@ -20,10 +21,9 @@ export default function List() {
       <h2> Estudos do dia </h2>
       <ul>
         {tarefas.map((item, index) => (
-          <li key={index} className={style.item}>
-            <h3>{item.nome}</h3>
-            <span>{item.tempo}</span>
-          </li>
+          <Item key = {index} 
+          //Pega TODOS os atributos do item
+          {...item} />
         ))}
       </ul>
     </aside>

@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.scss";
 import Button from "@/components/Button";
 import Form from "@/components/Form";
 import List from "@/components/List";
+import Timer from "@/components/Timer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,8 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${styles.AppStyle} `}>
         <Form />
-        <List/>
+        <List />
+        <Timer />
       </main>
     </>
   );
